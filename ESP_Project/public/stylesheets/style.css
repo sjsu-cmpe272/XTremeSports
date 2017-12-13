@@ -1,0 +1,187 @@
+.thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #000000;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.black-back {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+}
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+    color: #FFF;
+}
+.btn-min-block
+{
+    min-width: 170px;
+    line-height: 26px;
+}
+.btn-clear
+{
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+    margin-right: 15px;
+}
+.btn-clear:hover
+{
+    color: #000;
+    background-color: #FFF;
+}
+
+.site-footer-inner{
+    background-color: black;
+}
+
+.footer-rei-story-text{
+    color: #FFF;
+}
+
+/*custom navbar color*/
+/* navbar */
+.navbar-default {
+    /*background-color: #5DBCD2;*/
+    background-color: black;
+    border-color: black;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #5E5E5E;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #00B7FF;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #00B7FF;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #00B7FF;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+        background-color: #00B7FF;}
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        background-color: #00B7FF;
+        color: #333;
+    }
+.navbar-nav>li>.dropdown-menu{
+    background-color: #00B7FF !important;
+}
+
+@media screen and (min-width: 768px)
+    .jumbotron {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+   /* .navbar-nav > li > a {padding-top:0px !important; padding-bottom:5px !important;
+        line-height: 40px;}
+    .navbar {margin-left:40px; min-height:25px !important}*/
+
+    .site-logo{
+        float: left;
+        position: relative;
+        margin: 10px 15px 15px 10px;
+    }
+    .bg-div{
+        background:#333;
+        overflow: hidden;
+    }
+
+    .container-fluid{
+        padding-left: 0px;
+    }
+
+ /*   .left-menu-navbar {padding-top:40px !important; padding-bottom:5px !important;
+        padding-left:9px ;line-height: 20px; color: white;
+    }*/
+
+
+    /* EXAMPLE 3
+
+    line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
+    .example3 .navbar-brand {
+        height: 110px;
+    }
+
+    .example3 .nav >li >a {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    .example3 .navbar-toggle {
+        padding: 10px;
+        margin: 25px 15px 25px 0;
+    }

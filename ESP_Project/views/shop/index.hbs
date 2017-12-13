@@ -1,0 +1,93 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+
+
+{{# each products }}
+    <div class="row">
+        {{# each this }}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="{{ this.imagePath }}" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>{{ this.title }}</h3>
+                        <div id="fb-root"></div>
+
+                        <p class="description">{{ this.description }}</p>
+                        <div class="clearfix">
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ER5E9FVCG7LYA">
+<table>
+<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr>
+    <tr><td><select name="os0">
+	<option value="Small">Small $10.00 USD</option>
+	<option value="Medium">Medium $20.00 USD</option>
+	<option value="Large">Large $30.00 USD</option>
+</select> </td></tr>
+</table>
+
+<div style="float:left;">
+
+                <div class="fb-share-button" data-href={{ this.imagePath }} data-layout="button"
+                     data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
+                <a class="twitter-share-button"
+                   target="_blank"
+                   href="https://twitter.com/share"
+                   data-text={{ this.title }}
+                   data-url={{ this.imagePath }}
+                   data-hashtags="sporting goods"
+                   data-via="twitterdev"
+                   data-related="twitter">
+                    Tweet
+                </a>
+</div>
+
+
+
+
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}

@@ -1,0 +1,229 @@
+<div class="example3">
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/images/NEW-LOGO.png" alt="Xtreme Sports logo">
+                </a>
+            </div>
+            <div id="navbar3" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  <li class="active"><a href="#">Home</a></li>-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volleyball<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Firm Ground</a></li>
+                            <li><a href="products">Artificial Ground</a></li>
+                            <li><a href="products">Soft Ground</a></li>
+			    <li><a href="products">Indoor Court</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hockey <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Hockey Stick</a></li>
+                            <li><a href="products">Hockey Shoes</a></li>
+                            <li><a href="products">Hockey Skates</a></li>
+			    <li><a href="products">Hockey Gloves</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Baseball <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Cleats</a></li>
+                            <li><a href="products">Shorts</a></li>
+                            <li><a href="products">Socks</a></li>
+                            <li><a href="products">Equipment</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Skateboarding <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Skate Shoes</a></li>
+                            <li><a href="products">Jackets and Vests</a></li>
+                            <li><a href="products">Skateboard</a></li>
+                            <li><a href="products">Sunglasses</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tennis<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Tennis Racket</a></li>
+                            <li><a href="products">Tennis Balls</a></li>
+                            <li><a href="products">Tennis Shoes</a></li>
+                            <li><a href="products">Tennis Nets</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Camping<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="products">Water bottle</a></li>
+                            <li><a href="products">Tent</a></li>
+                            <li><a href="products">Freestyle Chair</a></li>
+                            <li><a href="products">Camping Bags</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hiking<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="products">Equipments</a></li>
+                        <li><a href="products">Boots</a></li>
+                        <li><a href="products">Socks</a></li>
+                        <li><a href="products">Sunglasses</a></li>
+                    </ul>
+                </li>
+                    <li>
+                        <a href="/shopping-cart/">
+                            <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> Store Locator
+                            <span class="badge">{{session.cart.totalQty}}</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Management <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {{# if login }}
+                                <li><a href="/user/profile">User Account</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/user/logout">Logout</a></li>
+                            {{ else }}
+                                <li><a href="/auth/login">Sign in</a></li>
+				<li><a target="_blank" href="http://localhost:3000/">Developer Sign in</a></li>
+
+                            {{/if}}
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+
+
+<!--
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+        <div class="navbar-header">
+           &lt;!&ndash; <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                &lt;!&ndash; <span class="sr-only">Toggle navigation</span>
+
+                <span class="icon-bar"></span>&ndash;&gt;
+            </button>&ndash;&gt;
+            <a href="/"><img class="navbar-left img-responsive" height="20%" width="20%" src="/images/logo-xtreme1.jpg"></a>
+
+            <a href="/"><img class="navbar-right img-responsive" height="20%" width="20%" src="/images/right-logo.png"></a>
+            <ul class="nav navbar-right">
+               &lt;!&ndash; <li class="nav-item">
+                    <a class="nav-link active" href="#">Maps</a>
+                </li>&ndash;&gt;
+
+
+            </ul>
+           &lt;!&ndash; <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+            </ul>&ndash;&gt;
+
+            &lt;!&ndash;<a class="navbar-left" href="/"></a>&ndash;&gt;
+
+        </div>
+
+        &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hockey <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Football <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skating <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marathon <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/shopping-cart/">
+                        <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> Store Locator
+                        <span class="badge">{{session.cart.totalQty}}</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Management <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {{# if login }}
+                            <li><a href="/user/profile">User Account</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        {{ else }}
+                            <li><a href="/user/signup">Sign up</a></li>
+                            <li><a href="/user/signin">Sign in</a></li>
+                        {{/if}}
+
+                    </ul>
+                </li>
+            </ul>
+        </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+    </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
+</nav>
+-->

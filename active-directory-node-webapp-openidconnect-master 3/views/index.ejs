@@ -1,0 +1,590 @@
+<% if (!user) { %>
+<!--<h2>Welcome! Please log in.</h2>
+<a href="/login">Log In</a>-->
+
+<!DOCTYPE html>
+<html>
+<title>Developer Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+	body,h1 {font-family: "Raleway", sans-serif}
+	body, html {height: 100%}
+	.bgimg {
+		background-image: url('https://s3.amazonaws.com/vidbucketinvirginia/devbackground.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+	}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+	<div class="w3-display-topleft w3-padding-large w3-xlarge">
+		<!--<img src="https://s3.amazonaws.com/vidbucketinvirginia/NEW-LOGO.png" /> -->
+	</div>
+	<div class="w3-display-middle">
+
+		<h1 class="w3-jumbo w3-animate-top"><a href="/login">DEVELOPER LOGIN</a></h1>
+
+		<hr class="w3-border-grey" style="margin:auto;width:40%">
+		<p class="w3-large w3-center"><img src="https://s3.amazonaws.com/vidbucketinvirginia/NEW-LOGO.png" /></p>
+	</div>
+	<div class="w3-display-bottomleft w3-padding-large">
+		<!--Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>-->
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% } else { %>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* {box-sizing: border-box}
+		body {font-family: "Lato", sans-serif;}
+
+		/* Style the tab */
+		div.tab {
+			float: left;
+			/*border: 1px solid #ccc;*/
+			background-color: #f1f1f1;
+			width: 30%;
+			height: 300px;
+		}
+
+		/* Style the buttons inside the tab */
+		div.tab button {
+			display: block;
+			background-color: inherit;
+			color: black;
+			padding: 22px 16px;
+			width: 100%;
+			border: none;
+			outline: none;
+			text-align: left;
+			cursor: pointer;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		div.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current "tab button" class */
+		div.tab button.active {
+			background-color: #ccc;
+		}
+
+		.updateproduct {
+			background-color: #ccc !important;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			float: left;
+			padding: 0px 12px;
+			/*border: 1px solid #ccc;*/
+			width: 70%;
+			border-left: none;
+			height: 300px;
+		}
+
+		/*style 2 */
+		body {margin:0;}
+
+		.topnav {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.topnav a {
+			float: left;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.highlight{
+			background-color: #4CAF50 !important;
+			color: white !important;
+		}
+
+		.topnav a.active {
+			background-color: #723740;
+			color: white;
+		}
+		/* style 3 */
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 300px !important;
+			margin: auto !important;
+			text-align: center !important;
+			font-size: small !important;
+		}
+
+		.title {
+			color: grey;
+			font-size: 18px;
+		}
+
+		.aid {
+			text-decoration: none;
+			font-size: 22px;
+			color: black;
+		}
+
+		#menuvertical {
+			text-align:center;
+			background-color: darkgrey;
+			width: 80%;
+			margin-left: 35px;
+		}
+
+		#buttongrey {
+			border: none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color: #000;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+			font-size: 18px;
+		}
+
+		button:hover, a:hover {
+			opacity: 0.7;
+		}
+		/* css 6 */
+		input[type=text], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=submit] {
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+
+		#crud {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+
+		.btn {
+			background: #4CAF50;
+			background-image: -webkit-linear-gradient(top, #4CAF50, #2bb85a);
+			background-image: -moz-linear-gradient(top, #4CAF50, #2bb85a);
+			background-image: -ms-linear-gradient(top, #4CAF50, #2bb85a);
+			background-image: -o-linear-gradient(top, #4CAF50, #2bb85a);
+			background-image: linear-gradient(to bottom, #4CAF50, #2bb85a);
+			-webkit-border-radius: 28;
+			-moz-border-radius: 28;
+			border-radius: 28px;
+			font-family: Arial;
+			color: #ffffff;
+			font-size: 20px;
+			padding: 10px 20px 10px 20px;
+			text-decoration: none;
+		}
+
+		.btn:hover {
+			background: #040412;
+			background-image: -webkit-linear-gradient(top, #040412, #04111a);
+			background-image: -moz-linear-gradient(top, #040412, #04111a);
+			background-image: -ms-linear-gradient(top, #040412, #04111a);
+			background-image: -o-linear-gradient(top, #040412, #04111a);
+			background-image: linear-gradient(to bottom, #040412, #04111a);
+			text-decoration: none;
+		}
+		/* bootstrap  */
+		.panel-primary>.panel-heading {
+			color: #fff;
+			background-color: #337ab7;
+			border-color: #337ab7;
+			box-sizing: border-box;
+		}
+		.panel-footer {
+			padding: 10px 15px;
+			background-color: #f5f5f5;
+			border-top: 1px solid #ddd;
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		.panel-green > .panel-heading {
+			border-color: #5cb85c;
+			color: white;
+			background-color: #5cb85c;
+		}
+		.panel-yellow {
+			border-color: #f0ad4e;
+		}
+
+		.panel-yellow > .panel-heading {
+			border-color: #f0ad4e;
+			color: white;
+			background-color: #f0ad4e;
+		}
+
+		.panel-red > .panel-heading {
+			border-color: #d9534f;
+			color: white;
+			background-color: #d9534f;
+		}
+
+		.panel {
+			margin-bottom: 20px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+			box-shadow: 0 1px 1px rgba(0,0,0,.05);
+		}
+
+		/*.panel-heading {
+			padding: 10px 15px;
+			border-bottom: 1px solid transparent;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}*/
+
+	</style>
+</head>
+<body>
+<div class="topnav">
+	<a class="highlight" href="/">Welcome John Parker</a>
+	<a href="#">News</a>
+	<a href="#" onclick="openCity(event, 'Germany')">Development Metrics</a>
+	<a target="_blank" href="https://sso.online.tableau.com">Tableau</a>
+	<a target="_blank" href="http://ec2-54-84-242-32.compute-1.amazonaws.com:8080/">Jenkins</a>
+	<a style="float: right" href="/logout">Logout</a>
+</div>
+
+<!--<p>Click on the buttons inside the tabbed menu:</p>-->
+
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Dashboard</button>
+	<div class="card">
+		<img src="https://s3.amazonaws.com/vidbucketinvirginia/jonimage.png" alt="John" style="width:100%">
+		<h3>John Parker</h3>
+		<p class="title">Senior Software Engineer, </p>
+		<h5 class="title"><em>Xtreme Sporting</em></h5>
+		<a class= "aid" href="#" ><i class="fa fa-dribbble"></i>&nbsp;<i class="fa fa-twitter"></i>&nbsp;<i class="fa fa-linkedin"></i>&nbsp;<i class="fa fa-facebook"></i></a>
+		<!--<a class= "aid" href="#"><i class="fa fa-twitter"></i></a>
+		<a class= "aid" href="#"><i class="fa fa-linkedin"></i></a>
+		<a class= "aid" href="#"><i class="fa fa-facebook"></i></a>-->
+		<p><button id="buttongrey">View Profile</button></p>
+	</div>
+	<button id="menuvertical" class="tablinks" onclick="openCity(event, 'Paris')">Create Product</button>
+	<button id="menuvertical" class="tablinks updateproduct" onclick="openCity(event, 'Tokyo')">Update Product</button>
+	<button id="menuvertical" class="tablinks" onclick="openCity(event, 'Turkey')">Delete Product</button>
+</div>
+
+<div id="London" class="tabcontent">
+	<h2>Sporting Goods Sales</h2>
+	<div class='tableauPlaceholder' id='viz1511635370397' style='position: relative'>
+		<noscript>
+			<a href='#'>
+				<img alt='SalesByRegion ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SportinggoodsESPProject&#47;SalesByRegion&#47;1_rss.png' style='border: none' />
+			</a>
+		</noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			<param name='embed_code_version' value='3' />
+			<param name='site_root' value='' />
+			<param name='name' value='SportinggoodsESPProject&#47;SalesByRegion' />
+			<param name='tabs' value='no' /><param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SportinggoodsESPProject&#47;SalesByRegion&#47;1.png' />
+			<param name='animate_transition' value='yes' />
+			<param name='display_static_image' value='yes' />
+			<param name='display_spinner' value='yes' />
+			<param name='display_overlay' value='yes' />
+			<param name='display_count' value='yes' />
+			<param name='filter' value='publish=yes' />
+		</object>
+	</div>
+	<script type='text/javascript'>
+        var divElement = document.getElementById('viz1511635370397');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+</div>
+
+<div id="Paris" class="tabcontent">
+	<h3 align="center">Create Product</h3>
+	<div class="crud">
+		<section class="insert">
+
+			<form action="/insert" method="post">
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input type="text" class="form-control" id="title" name="title">
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input type="text" class="form-control" id="description" name="description">
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label>
+					<input type="text" class="form-control" id="price" name="price">
+				</div>
+				<div class="form-group">
+					<label for="imagePath">Image Path</label>
+					<input class="form-control" type="text" id="imagePath" name="imagePath">
+				</div>
+				<button class="btn" type="submit">INSERT</button>
+			</form>
+		</section>
+	</div>
+</div>
+
+<div id="Germany" class="tabcontent">
+	<p></p>
+	<div class="row">
+		<div class="col-lg-3 col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-comments fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge">26</div>
+							<div>New Comments!</div>
+						</div>
+					</div>
+				</div>
+				<a href="#">
+					<div class="panel-footer">
+						<span class="pull-left">View Details</span>
+						<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6">
+			<div class="panel panel-green">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-tasks fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge">12</div>
+							<div> &nbsp;New Tasks!</div>
+						</div>
+					</div>
+				</div>
+				<a href="#">
+					<div class="panel-footer">
+						<span class="pull-left">View Details</span>
+						<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6">
+			<div class="panel panel-yellow">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-shopping-cart fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge">124</div>
+							<div style="float: right">&nbsp; New Orders!</div>
+						</div>
+					</div>
+				</div>
+				<a href="#">
+					<div class="panel-footer">
+						<span class="pull-left">View Details</span>
+						<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6">
+			<div class="panel panel-red">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge">13</div>
+							<div style="float: right">Support Tickets!</div>
+						</div>
+					</div>
+				</div>
+				<a href="#">
+					<div class="panel-footer">
+						<span class="pull-left">View Details</span>
+						<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="piechart"></div>
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Active Bugs', 8],
+                ['Requirements Coverage', 2],
+                ['Test Execution', 4],
+                ['Project Change Requests', 2],
+                ['Development Packages', 8]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = {'title':'Development Metrics', 'width':600, 'height':400};
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+	</script>
+
+</div>
+
+
+
+
+<div id="Tokyo" class="tabcontent">
+	<h3 align="center">Update Product Data</h3>
+	<div id="crud">
+		<section class="update">
+
+			<form action="/update" method="post">
+				<div class="input">
+					<label for="id">Title</label>
+					<input type="text" id="id" name="id">
+				</div>
+				<div class="input">
+					<label for="title">Description</label>
+					<input type="text" id="title" name="title">
+				</div>
+				<div class="input">
+					<label for="content">Price</label>
+					<input type="text" id="content" name="content">
+				</div>
+				<div class="input">
+					<label for="author">Image</label>
+					<input type="text" id="author" name="author">
+				</div>
+				<button class="btn" type="submit">UPDATE</button>
+			</form>
+		</section>
+	</div>
+</div>
+
+<div id="Turkey" class="tabcontent">
+
+	<h3 align = "center">Delete Product</h3>
+	<div class="crud"><section class="delete">
+			<form action="/delete" method="post">
+				<div class="input">
+					<label for="id">ID</label>
+					<input type="text" id="id" name="id">
+				</div>
+				<button class="btn" type="submit">DELETE</button>
+			</form>
+		</section></div>
+</div>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+<% } %>
+
+
