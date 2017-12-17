@@ -1,9 +1,9 @@
-# XtremeSports
+# Xtreme Sporting
 
 ======================
-
+    
     University Name: http://www.sjsu.edu/
-    Course: Enterprise Software Platforms
+    Course: Enterprise Software Platforms CMPE-272
     Professor: Andrew Bond
     ISA: Abhishek
     
